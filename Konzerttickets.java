@@ -29,7 +29,7 @@ public class Konzerttickets {
             }
 
         }
-       return(preis == 0);
+       return true;
     }
 
     public static Integer price2(Date date3) throws ParseException {
