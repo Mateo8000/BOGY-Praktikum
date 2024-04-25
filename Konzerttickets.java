@@ -1,4 +1,7 @@
-//Mittwoch E-Mail Aufgabe
+//Mittwoch begonnen/ Donnerstag fertig E-Mail Aufgabe
+// Am Mittwoch zusätzlich GitHub eingeführt + an einem Metting teilgenommen über Service von Website einer Firma;
+// also welche Funktionen es hat wie 24/7 Support etc.
+
 
 
 import java.util.Scanner;
@@ -9,50 +12,48 @@ import java.text.ParseException;
 
 public class Konzerttickets {
 
-    public static boolean price1(Date date1, final Integer preis) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
-        Date dateK = sdf.parse("2024-02-03 10:00");
-        Date dateK2 = sdf.parse("2024-02-03 20:00");
-        int result = date1.compareTo(dateK);
-        if (result < 0) {
-            return(preis == 30);
+    public static double price1(Date date1) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+        Date dateK = sdf.parse("02.05.2024 10:00");
+        Date dateK2 = sdf.parse("02.05.2024 20:00");
+        double ticketpreis = 30.00;
+        if (date1.before(dateK)) {
+            return ticketpreis;
         }
-        if (result == 0) {
-            return(preis == 35);
+        if (date1.equals(dateK)) {
+            return ticketpreis + 5.00;
         }
-        if (result > 0) {
-            int result2 = date1.compareTo(dateK2);
-            if (result2 < 0) {
-
-
-
+        if (date1.after(dateK) && date1.before(dateK2)) {
+            for ( int i=10; i<= 19; i++){
+                Date dateK3 = sdf.parse("02.05.2024 " + i + ":00");
+                if (date1.after(dateK3)){
+                    int hours = date1.getHours();
+                    double depend = (hours - 10) * 2.00;
+                    return ticketpreis + 5.00 + depend;
+                }
             }
-
         }
-       return true;
-    }
-
-    public static Integer price2(Date date3) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
-        Scanner sc = new Scanner(System.in);
-        int preis = 0;
-
-        return preis;
+        return -1;
     }
 
 
     public static void main(String[] args) throws ParseException {
         Scanner sc = new Scanner(System.in);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
-        System.out.println("Bitte heutiges Datum eingeben:");
-        Date today = sdf.parse(sc.next());
-        System.out.println("Bitte Anzahl Tickets eingeben:");
-        int ticket1 = sc.nextInt();
-        boolean result = price1(today, ticket1);
-        if(result){
-            System.out.println();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+        String datumString = "02.05.2024 19:59";
+        Date today = sdf.parse(datumString);
+        System.out.println("Datum: " + today);
+        System.out.println("Anzahl der Tickets eingeben: ");
+        int ticketnumber = sc.nextInt();
+        double result = price1(today);
+        double gesamt = price1(today) * ticketnumber;
+        if(price1(today) <= 0){
+            System.out.println("Tickets sind nicht mehr verfügbar.");
         }
-
+        else {
+            System.out.println("Aktueller Einzelticketpreis: " + result + " Euro");
+            System.out.println("Der Gesamtpreis wäre: " + gesamt + " Euro");
+        }
     }
 
 }
