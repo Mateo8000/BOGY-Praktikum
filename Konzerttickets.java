@@ -1,9 +1,3 @@
-//Mittwoch begonnen/ Donnerstag fertig E-Mail Aufgabe
-// Am Mittwoch zusätzlich GitHub eingeführt + an einem Metting teilgenommen über Service von Website einer Firma;
-// also welche Funktionen es hat wie 24/7 Support etc.
-
-
-
 import java.util.Scanner;
 import java.util.Date;
 import java.text.SimpleDateFormat;
