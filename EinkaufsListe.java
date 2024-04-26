@@ -26,4 +26,5 @@ public class EinkaufsListe {
         System.out.println("Anzahl der Produkte: " + einkaufsliste.size());
     }
 }
+//Montag Aufgabe 6
 
