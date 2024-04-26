@@ -34,7 +34,7 @@ public class Konzerttickets {
     public static void main(String[] args) throws ParseException {
         Scanner sc = new Scanner(System.in);
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm");
-        String datumString = "02.05.2024 19:59";
+        String datumString = "02.05.2024 15:30";
         Date today = sdf.parse(datumString);
         System.out.println("Datum: " + today);
         System.out.println("Anzahl der Tickets eingeben: ");
