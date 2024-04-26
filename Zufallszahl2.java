@@ -20,4 +20,3 @@ public class Zufallszahl2 {
         }
     }
 }
-//Montag Aufgabe 5 mit Rolands Variation

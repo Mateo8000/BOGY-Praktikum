@@ -13,4 +13,3 @@ public class AusgabeSumme {
 
     }
 }
-//Montag Aufgabe 3

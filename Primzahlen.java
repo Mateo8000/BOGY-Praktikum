@@ -105,4 +105,3 @@ public class Primzahlen {
         System.out.println("Es sind " + (now - startTime) + " ms vergangen.");
     }
 }
-//Dienstag E-Mail Aufgabe

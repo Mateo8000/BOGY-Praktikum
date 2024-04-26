@@ -32,5 +32,5 @@ public class Notendurchschnitt {
 
 
 }
-//Dienstag E-Mail Aufgabe
+
 

@@ -59,4 +59,4 @@ public class RateSpiel {
 
     }
 }
-//Montag/ Dienstag Separate Aufgabe
+

@@ -46,4 +46,3 @@ public class TaschenrechnerBasic {
 
 }
 
-//Dienstag E-Mail Aufgabe

@@ -7,5 +7,5 @@ public class HalloName {
         String eingabe = sc.next();
         System.out.println("Hallo " + eingabe);
     }
-    //Montag Aufgabe 2
+
 }

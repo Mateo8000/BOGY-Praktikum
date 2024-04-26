@@ -12,4 +12,3 @@ public class EuroDollar {
         System.out.println(dollargerundet);
     }
 }
-//Montag Aufgabe 4
